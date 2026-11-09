@@ -6,7 +6,7 @@
     "dev": "slidev --open",
     "build": "slidev build",
     "build:pages": "slidev build --base /butler-deck/",
-    "deploy": "slidev build --base /butler-deck/ && gh-pages -d dist -t true",
+    "deploy": "slidev build --base /butler-deck/ && gh-pages -d dist --dotfiles --nojekyll",
     "export": "slidev export --output butler-of-everything-proposal.pdf",
     "export-pptx": "slidev export --format pptx --output butler-of-everything-proposal.pptx"
   },

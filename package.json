@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "build:pages": "slidev build --base /butler-deck/",
-    "deploy": "slidev build --base /butler-deck/ && gh-pages -d dist --dotfiles --nojekyll",
+    "build:pages": "rimraf dist && slidev build --base /butler-deck/",
+    "deploy": "rimraf dist && slidev build --base /butler-deck/ && gh-pages -d dist --dotfiles --nojekyll",
     "export": "slidev export --output butler-of-everything-proposal.pdf",
     "export-pptx": "slidev export --format pptx --output butler-of-everything-proposal.pptx"
   },
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "playwright-chromium": "latest"
+    "playwright-chromium": "latest",
+    "rimraf": "^6.1.4"
   }
 }
